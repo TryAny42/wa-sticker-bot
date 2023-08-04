@@ -1,5 +1,6 @@
 import { Message } from 'whatsapp-web.js';
 
+import desaHandler from '../handlers/desa';
 import helpHandler from '../handlers/help';
 import stickerHandler from '../handlers/sticker';
 import goErrorHandler from '../utils/goErrHandler';
@@ -27,6 +28,11 @@ const messageListener = async (message: Message) => {
     .split('|');
   const { stickerName, stickerAuthor } = parseOptions(options);
 
+  // handle desa
+  if (command.toLowerCase().includes('1')) {
+    return desaHandler(message);
+  }
+  
   // handle help
   if (command.toLowerCase().includes('!help')) {
     return helpHandler(message);

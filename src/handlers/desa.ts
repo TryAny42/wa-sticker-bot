@@ -11,4 +11,4 @@ const helpHandler = (message: Message) => {
   );
 };
 
-export default helpHandler;
+export default desaHandler;

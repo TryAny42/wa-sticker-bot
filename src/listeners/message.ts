@@ -1,6 +1,10 @@
 import { Message } from 'whatsapp-web.js';
 
 import desaHandler from '../handlers/desa';
+import desaHandler from '../handlers/event';
+import desaHandler from '../handlers/umkm';
+import desaHandler from '../handlers/surat';
+import desaHandler from '../handlers/website';
 import helpHandler from '../handlers/help';
 import stickerHandler from '../handlers/sticker';
 import goErrorHandler from '../utils/goErrHandler';
@@ -31,6 +35,31 @@ const messageListener = async (message: Message) => {
   // handle desa
   if (command.toLowerCase().includes('1')) {
     return desaHandler(message);
+  }
+
+  // handle event
+  if (command.toLowerCase().includes('2')) {
+    return eventHandler(message);
+  }
+
+  // handle umkm
+  if (command.toLowerCase().includes('3')) {
+    return umkmHandler(message);
+  }
+
+  // handle surat
+  if (command.toLowerCase().includes('4')) {
+    return suratHandler(message);
+  }
+
+  // handle website
+  if (command.toLowerCase().includes('5')) {
+    return websiteHandler(message);
+  }
+
+  // handle gambar
+  if (command.toLowerCase().includes('6')) {
+    return gambarHandler(message);
   }
   
   // handle help

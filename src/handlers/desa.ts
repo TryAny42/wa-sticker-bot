@@ -2,8 +2,7 @@ import { Message } from 'whatsapp-web.js';
 
 const helpHandler = (message: Message) => {
   message.reply(
-    `Selamat datang di Layanan Informasi *Desa Mendolo Lor*
-Ketik angka untuk memilih layanan kami:
+    `Ketik *huruf* untuk mendapatkan kontak perangkat desa:
 
 1. Kepala Desa
 2. Sekretaris Desa

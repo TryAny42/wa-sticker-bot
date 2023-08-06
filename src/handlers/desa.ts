@@ -1,13 +1,13 @@
 import { Message } from 'whatsapp-web.js';
 
-const helpHandler = (message: Message) => {
+const desaHandler = (message: Message) => {
   message.reply(
     `Ketik *huruf* untuk mendapatkan kontak perangkat desa:
 
-1. Kepala Desa
-2. Sekretaris Desa
-3. Kepala Urusan
-4. Kepala Dusun`
+A. Kepala Desa
+B. Sekretaris Desa
+C. Kepala Urusan
+D. Kepala Dusun`
   );
 };
 

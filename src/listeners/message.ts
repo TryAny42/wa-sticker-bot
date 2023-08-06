@@ -56,8 +56,6 @@ const messageListener = async (message: Message) => {
   } else if (command.toLowerCase().includes('sticker')) {
     return message.reply('Gambarnya mana?');
   }
-
-  message.reply('*Command salah*, coba cek kembali command yang Anda kirim');
 };
 
 export default messageListener;

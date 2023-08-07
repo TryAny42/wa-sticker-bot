@@ -23,8 +23,7 @@ const gambarHandler = async ({
   //const media = async () => {
   //      await MessageMedia.fromUrl('https://github.com/TryAny42/wa-sticker-bot/blob/ceef91623f498919b091e84813963d3af484595d/assets/img/umkm.PNG');
   //};
-  const { data: media } = await goErrorHandler(() =>
-    MessageMedia.fromUrl('https://github.com/TryAny42/wa-sticker-bot/blob/ceef91623f498919b091e84813963d3af484595d/assets/img/umkm.PNG')
+  const media = await MessageMedia.fromUrl('https://github.com/TryAny42/wa-sticker-bot/blob/ceef91623f498919b091e84813963d3af484595d/assets/img/umkm.PNG')
   );
   
   const { error: replyError } = await goErrorHandler(() =>

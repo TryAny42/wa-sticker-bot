@@ -12,6 +12,10 @@ const gambarHandler = (message: Message) => {
   );
 };*/
 
+type GtickerHandlerParams = {
+  message: Message;
+};
+
 const gambarHandler = async ({
   message,
 }: GambarHandlerParams) => {

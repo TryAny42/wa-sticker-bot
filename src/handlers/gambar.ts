@@ -12,7 +12,7 @@ const gambarHandler = (message: Message) => {
   );
 };*/
 
-type GtickerHandlerParams = {
+type GambarHandlerParams = {
   message: Message;
 };
 

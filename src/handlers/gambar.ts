@@ -5,7 +5,7 @@ const media = async () => {
 };
 
 const gambarHandler = (message: Message) => {
-  message.reply(`media`
+  message.reply(media
   );
 };
 

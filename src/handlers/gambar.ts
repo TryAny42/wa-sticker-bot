@@ -24,7 +24,7 @@ const gambarHandler = async ({
         await MessageMedia.fromUrl('https://github.com/TryAny42/wa-sticker-bot/blob/ceef91623f498919b091e84813963d3af484595d/assets/img/umkm.PNG');
   };
   
-  const { error: replyError } = await goErrorHandler(() =>
+  const { data: media, error: replyError } = await goErrorHandler(() =>
     message.reply(media, message.from)
   );
   if (replyError instanceof Error) {

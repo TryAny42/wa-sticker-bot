@@ -21,7 +21,7 @@ const gambarHandler = async ({
   };
   
   const { error: replyError } = await goErrorHandler(() =>
-    message.reply(media, message.from);
+    message.reply(media, message.from)
   );
   if (replyError instanceof Error) {
     message.reply('Terjadi kesalahan pada saat mengirim gambar');

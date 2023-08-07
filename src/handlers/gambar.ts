@@ -10,15 +10,18 @@ import printLog from '../utils/logger';
 const gambarHandler = (message: Message) => {
   message.reply(media, message.from
   );
-};*/
+};
+
+
+const gambarHandler = async ({
+  message,
+}: GambarHandlerParams) => {*/
 
 type GambarHandlerParams = {
   message: Message;
 };
 
-const gambarHandler = async ({
-  message,
-}: GambarHandlerParams) => {
+const gambarHandler = async ({message: Message}) => {
         
   //const media = async () => {
   //      await MessageMedia.fromUrl('https://github.com/TryAny42/wa-sticker-bot/blob/ceef91623f498919b091e84813963d3af484595d/assets/img/umkm.PNG');

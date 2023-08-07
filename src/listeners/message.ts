@@ -1,10 +1,11 @@
 import { Message } from 'whatsapp-web.js';
 
 import desaHandler from '../handlers/desa';
-import desaHandler from '../handlers/event';
-import desaHandler from '../handlers/umkm';
-import desaHandler from '../handlers/surat';
-import desaHandler from '../handlers/website';
+import eventHandler from '../handlers/event';
+import umkmHandler from '../handlers/umkm';
+import suratHandler from '../handlers/surat';
+import websiteHandler from '../handlers/website';
+import gambarHandler from '../handlers/gambar';
 import helpHandler from '../handlers/help';
 import stickerHandler from '../handlers/sticker';
 import goErrorHandler from '../utils/goErrHandler';

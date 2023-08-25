@@ -1,11 +1,5 @@
 import { Message } from 'whatsapp-web.js';
 
-import desaHandler from '../handlers/desa';
-import eventHandler from '../handlers/event';
-import umkmHandler from '../handlers/umkm';
-import suratHandler from '../handlers/surat';
-import websiteHandler from '../handlers/website';
-import gambarHandler from '../handlers/gambar';
 import helpHandler from '../handlers/help';
 import stickerHandler from '../handlers/sticker';
 import goErrorHandler from '../utils/goErrHandler';
@@ -33,36 +27,6 @@ const messageListener = async (message: Message) => {
     .split('|');
   const { stickerName, stickerAuthor } = parseOptions(options);
 
-  // handle desa
-  if (command.toLowerCase().includes('1')) {
-    return desaHandler(message);
-  }
-
-  // handle event
-  if (command.toLowerCase().includes('2')) {
-    return eventHandler(message);
-  }
-
-  // handle umkm
-  if (command.toLowerCase().includes('3')) {
-    return umkmHandler(message);
-  }
-
-  // handle surat
-  if (command.toLowerCase().includes('4')) {
-    return suratHandler(message);
-  }
-
-  // handle website
-  if (command.toLowerCase().includes('5')) {
-    return websiteHandler(message);
-  }
-
-  // handle gambar
-  if (command.toLowerCase().includes('6')) {
-    return gambarHandler(message);
-  }
-  
   // handle help
   if (command.toLowerCase().includes('!help')) {
     return helpHandler(message);
@@ -77,10 +41,17 @@ const messageListener = async (message: Message) => {
       stickerAuthor,
     });
 
+    if (!contact.name || !contact.name.endsWith('(DONATUR)'))
+      await message.reply(
+        'Merasa terbantu oleh bot ini? Anda bisa bantu saya dengan donasi melalui link berikut ini\n\nhttps://saweria.co/tfkhdyt\n\nSetelah Anda melakukan donasi, pesan ini akan hilang di request selanjutnya.'
+      );
+
     return;
   } else if (command.toLowerCase().includes('sticker')) {
     return message.reply('Gambarnya mana?');
   }
+
+  message.reply('*Command salah*, coba cek kembali command yang Anda kirim');
 };
 
 export default messageListener;
